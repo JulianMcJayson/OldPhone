@@ -2,7 +2,7 @@
 
 namespace OldPhoneTest
 {
-    public class UnitTest1
+    public class PhoneTests
     {
         private readonly PhoneManager _phone = new(new PhonePad());
         [Fact]
