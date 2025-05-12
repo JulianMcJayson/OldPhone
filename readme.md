@@ -1,5 +1,5 @@
 # Old Phone Challenge
-Console Application for converting numpads to the English world.
+A C# console application that simulates typing on a classic mobile numpad and converts input into English words.
 
 ## Project structure 
 <pre>
@@ -15,23 +15,30 @@ Console Application for converting numpads to the English world.
 </pre>
 
 ## Documentation
-This is short & sweet document for both users and developers.
+This short & sweet document is for both users and developers.
 ### User
-- use `git clone https://github.com/JulianMcJayson/OldPhone`
-- `cd` to the `./OldPhone/OldPhone`
-- finally run command `dotnet run`.
-### Developer
-This project has 3 class 1 record
-+ `PhoneManager` (Class)
-+ `PhonePad` (Class)
-+ `PadPair` (Record)
-
-you can create your own PhonePad with key-value such as 1-9 but some spacial like `0`, `*`, or `#` remain the same.\
-this is an use case example.
+Clone the project:
+```bash
+git clone https://github.com/JulianMcJayson/OldPhone
+cd ./OldPhone/OldPhone
+dotnet run
 ```
+### Developer
+This project contains:
+- `PhoneManager` (main class)
+- `PhonePad` (keypad layout and mappings)
+- `PadPair` (record type to store key and press count)
+
+You can create your own PhonePad with custom key mappings (1–9). Special keys like 0, *, and # maintain reserved behaviors.
+
+Example usage:
+```cs
 var phonePad = new PhonePad();
 var newPhone = new PhoneManager(phonePad);
-var output = newPhone.OldPhonePad(input);
+var output = newPhone.OldPhonePad("4433555 555666#"); // Output: HELLO
 ```
+
 ## Developer
-Jaratphong Meethamkaewkla :man_technologist:
+Jaratphong Meethamkaewkla, 2025 :man_technologist:
+ 
+___
