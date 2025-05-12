@@ -90,7 +90,7 @@ namespace OldPhone.Phone
                 //Stop condition when left is difference to a right pointer.
                 while (right < input.Length && input[left] == input[right])
                 {
-                    if(countKey >= pad.NumPads[input[left]].Count) countKey = 1;
+                    if(countKey >= pad.NumPads[input[left]].Count) countKey = 0;
                     //Update the counter and only the right pointer to finding the end of the same character.
                     countKey++;
                     right++;
