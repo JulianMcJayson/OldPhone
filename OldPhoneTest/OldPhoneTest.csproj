@@ -17,5 +17,9 @@
     <ItemGroup>
         <Using Include="Xunit"/>
     </ItemGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="../OldPhone/OldPhone.csproj"/>
+    </ItemGroup>
 
 </Project>

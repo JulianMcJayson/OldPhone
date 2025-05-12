@@ -33,6 +33,8 @@ namespace OldPhone.Phone
                     Console.WriteLine("Input Error : " + e.Message);
                 else
                     Console.WriteLine("Unexpected Error : " + e.Message);
+
+                throw;
             }
             //Convert to upper character
             result = result.ToUpper();
