@@ -33,12 +33,12 @@ jobs:
         run: dotnet add package coverlet.collector --version 6.0.2
         working-directory: ./OldPhoneTest
       - name: Testing...
-        run: dotnet test
+        run: dotnet test --no-restore --logger trx --results-directory "./OldPhoneTest/TestResults-${{ matrix.dotnet-version }}"
         working-directory: ./OldPhoneTest
       - name: Upload dotnet test results
         uses: actions/upload-artifact@v4
         with:
           name: dotnet-results-${{ matrix.dotnet-version }}
-          path: TestResults-${{ matrix.dotnet-version }}
+          path: ./OldPhoneTest/TestResults-${{ matrix.dotnet-version }}
         if: ${{ always() }}
         
