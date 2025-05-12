@@ -1,6 +1,8 @@
 # Old Phone Challenge
 A C# console application that simulates typing on a classic mobile numpad and converts input into English words.
 
+Dotnet version: 9.0
+
 ## Project structure 
 <pre>
 📁 OldPhone
@@ -16,7 +18,6 @@ A C# console application that simulates typing on a classic mobile numpad and co
 
 ## Documentation
 This short & sweet document is for both users and developers.
-Dotnet version: 9.0
 
 ### User
 Clone the project:
