@@ -18,21 +18,23 @@ jobs:
           dotnet-version: ${{ matrix.dotnet-version }}
       - name: Display dotnet version
         run: dotnet --version
+      - name: Current Path
+        run: pwd
       - name: Install xunit
         run: dotnet add package xunit --version 2.9.2
-        working-directory: /home/runner/work/OldPhone/OldPhoneTest
+        working-directory: ./OldPhoneTest
       - name: Install xunit.runner.visualstudio
         run: dotnet add package xunit.runner.visualstudio --version 2.8.2
-        working-directory: /home/runner/work/OldPhone/OldPhoneTest
+        working-directory: ./OldPhoneTest
       - name: Install Microsoft.NET.Test.Sdk
         run: dotnet add package Microsoft.NET.Test.Sdk --version 17.12.0
-        working-directory: /home/runner/work/OldPhone/OldPhoneTest
+        working-directory: ./OldPhoneTest
       - name: Install coverlet.collector
         run: dotnet add package coverlet.collector --version 6.0.2
-        working-directory: /home/runner/work/OldPhone/OldPhoneTest
+        working-directory: ./OldPhoneTest
       - name: Testing...
         run: dotnet test
-        working-directory: /home/runner/work/OldPhone/OldPhoneTest
+        working-directory: ./OldPhoneTest
       - name: Upload dotnet test results
         uses: actions/upload-artifact@v4
         with:
